@@ -8,7 +8,7 @@ import { db } from '/firebase'
 
 
 const styles = {
-    wrapper: `flex max-w-[46rem] h-[10rem] items-center gap-[1rem] cursor-pointer border border-black p-2`,
+    wrapper: `flex max-w-[46rem] h-[10rem] items-center gap-[1rem] cursor-pointer border border-black p-4 bg-[#ffffff]`,
     authorConatiner: `flex gap-[.4rem]`,
     authorImageContainer: `grid place-items-center rounded-full overflow-hidden h-[1.4rem] w-[1.4rem]`,
     authorImage: `object-cover`,
@@ -76,7 +76,7 @@ const PostCard = ({ post }) => {
                             </span>
 
                             <span className={styles.bookMarkContainer}>
-                                <FiBookmark className='h-5 w-5' />
+                                {/* <FiBookmark className='h-5 w-5' /> */}
                             </span>
                         </div>
                     </div>

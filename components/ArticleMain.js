@@ -1,18 +1,10 @@
 import Image from "next/image";
 // import Qazi from '../static/qazi.jpg'
-import { AiFillPlayCircle } from "react-icons/ai";
-import { IoLogoTwitter } from 'react-icons/io'
-import { FaFacebook } from 'react-icons/fa'
-import { GrLinkedin } from 'react-icons/gr'
-import { HiOutlineLink } from 'react-icons/hi'
-import { BiBookmark } from 'react-icons/bi'
-import { FiMoreHorizontal } from 'react-icons/fi'
-
-// import BannerImage from '../static/banner.png'
+import { AiFillPlayCircle } from "react-icons/ai" 
 
 
 const styles = {
-    wrapper: `flex items-center justify-center flex-[3] border-l border-r overflow-scroll`,
+    wrapper: `flex justify-center border-l border-r overflow-scroll`,
     content: `h-screen w-full p-[2rem]`,
     postHeaderContainer: `flex justify-between items-center mt-[2.2rem] mb-[1.2rem]`,
     authorContainer: `flex gap-[1rem]`,
@@ -35,6 +27,7 @@ const ArticleMain = ({ post, author }) => {
     
     return (
         <>
+        
             <div className={styles.wrapper}>
                 <div className={styles.content} >
                     <div className={styles.postHeaderContainer}>
@@ -61,15 +54,7 @@ const ArticleMain = ({ post, author }) => {
                                 </div>
                             </div>
                         </div>
-                        <div className={styles.socialIcons}>
-                            <IoLogoTwitter />
-                            <FaFacebook />
-                            <GrLinkedin />
-                            <HiOutlineLink />
-                            <div className={styles.space} />
-                            <BiBookmark />
-                            <FiMoreHorizontal />
-                        </div>
+                         
                     </div>
                     <div className={styles.articleMainContainer}>
                         <div className={styles.bannerContainer}>
@@ -90,7 +75,7 @@ const ArticleMain = ({ post, author }) => {
                                     year: 'numeric'
                                 })}
                             </div>
-                            <div className={styles.brief}> {post?.data?.brief}</div>
+                            {/* <div className={styles.brief}> {post?.data?.brief}</div> */}
                         </h4>
                         <div className={styles.articleText}>
                             {post?.data?.body}
@@ -99,6 +84,7 @@ const ArticleMain = ({ post, author }) => {
                     </div>
                 </div>
             </div>
+         
         </>
     )
 }

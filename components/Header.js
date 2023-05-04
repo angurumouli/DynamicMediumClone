@@ -4,12 +4,13 @@ import { useContext } from 'react'
 import { MediumContext } from '@/context/MediumContext'
 
 import Modal from 'react-modal'
+
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 import PostModal from '../components/PostModal'
-
 Modal.setAppElement('#__next')
+
 
 const customeStyles = {
   content:{
@@ -69,7 +70,7 @@ const Header = () => {
             <div className={styles.bannerNav}>
               <p>Our Services</p>
               <p>Member Ship</p>
-              <p onClick={handleUserAuth}>Sign In</p>
+              <p onClick={handleUserAuth}>Sign Innn</p>
               <p className={styles.accentedButton}>Get Started</p>
             </div>
           )

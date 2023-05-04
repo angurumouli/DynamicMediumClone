@@ -4,18 +4,18 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore"
 import { db } from "@/firebase"
 
 const styles = {
-    wrapper: 'w-[70rem] h-[50rem] flex flex-col justify-start items-center gap-[1rem] p-[1rem] font-mediumSerif overflow-scroll',
+    wrapper: 'w-[70rem] h-[50rem] flex flex-col justify-start items-center gap-[1rem] p-[1rem] font-mediumSerif overflow-scroll bg-[#DEE2E6]',
     title: `my-[2rem] font-bold text-3xl`,
     smallField: `w-full flex justify-between gap-[1rem]`,
     fieldTitle: `flex-1 text-end`,
     inputContainer: `flex-[5] h-min border-2 border-[#787878]`,
-    inputField: `w-full border-0 outline-none bg-transparent`,
+    inputField: `w-full border-0 outline-none bg-transparent bg-[#fff]`,
     accentedButton: 'bg-black text-white py-2 px-4 rounded-full cursor-pointer'
 }
 
 const PostModal = () => {
     const { currentUser } = useContext(MediumContext)
-
+    
     const [title,setTitle] = useState('')
     const [brief,setBrief] = useState('')
     const [category,setCategory] = useState('')
@@ -51,12 +51,12 @@ const PostModal = () => {
                             type="text"
                             value={title}
                             onChange={event => setTitle(event.target.value)}
-                            // placeholder="EnterSomething"
+                            // placehol der="EnterSomething"
                         />
                     </span>
                 </div>
 
-                <div className={styles.smallField}>
+                {/* <div className={styles.smallField}>
                     <span className={styles.fieldTitle}>Brief</span>
                     <span className={styles.inputContainer}>
                         <input
@@ -67,7 +67,7 @@ const PostModal = () => {
                             // placeholder="EnterSomething"
                         />
                     </span>
-                </div>
+                </div> */}
 
                 <div className={styles.smallField}>
                     <span className={styles.fieldTitle}>Banner Image URL</span>
